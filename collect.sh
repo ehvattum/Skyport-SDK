@@ -26,9 +26,14 @@ build_lovegraphics(){
     build_lovegraphics_windows
     build_lovegraphics_linux
     build_lovegraphics_osx
+    collect_lovereadme
     rm skyport2d.love
 }
-
+collect_lovereadme(){
+    cp ../skyport-lovegraphics/README win32/gui/
+    cp ../skyport-lovegraphics/README linux/gui/
+    cp ../skyport-lovegraphics/README osx/gui/
+}
 build_lovepackage(){
     message "creating .love package..."
     cd ../skyport-lovegraphics
@@ -72,6 +77,8 @@ collect_maps(){
 collect_documentation(){
     message "collecting documentation..."
     cp -r ../Skyport-logic/docs/ . || exit
+    rm -- "docs/en/EXAMPLE-AI"
+    rm -- "docs/en/MARKDOWN_HOWTO.md"
     cp -r docs linux || exit
     cp -r docs win32 || exit
     cp -r docs osx || exit
@@ -94,7 +101,17 @@ collect_bots(){
     cp -r ais osx/ || exit
     rm -rf ais
 }
-
+collect_readmes(){
+    message "collecting extra READMEs..."
+    cp extra/README-linux.md linux/
+    cp extra/README-win32.md win32/
+    cp extra/README-osx.md osx
+}
+collect_runscripts(){
+    cp extra/run.bat win32/server/
+    cp extra/run.sh linux/server/
+    cp extra/run.sh osx/server/
+}
 create_bundle(){
     mkdir Skyport-SDK-$BUILDNAME || exit
     mv {linux,osx,win32} Skyport-SDK-$BUILDNAME/ || exit
@@ -119,6 +136,8 @@ collect_maps
 collect_documentation
 collect_apis
 collect_bots
+collect_readmes
+collect_runscripts
 echo "################ PACKING BUNDLE ################"
 create_bundle
 echo "################ FINISHED BUILD ################"
