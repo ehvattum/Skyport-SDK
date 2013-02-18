@@ -18,7 +18,7 @@ You can use the bots in the ai/ folder for testing.
 Example:
 To run the javascript bot, install nodejs (nodejs.org) and from the
 cmd, run "node randomwalker.js".
-To run the python bot, install python 2.7 or 3.3 and from the cmd, run
+To run the python bot, install python 2.7 and from the cmd, run
 "python simplewalker.py".
 
 ### API
@@ -47,7 +47,7 @@ Du kan bruke bottene i "ai" mappen for testing.
 Eksempel:
 for å kjøre javascript botten; installer nodejs (nodejs.org) og fra cmd,
 kjør "node randomwalker.js".
-For å kjøre python botten, installer python 2.7 eller 3.3 og fra cmd, kjør
+For å kjøre python botten, installer python 2.7 og fra cmd, kjør
 "python simplewalker.py".
 
 ### API
