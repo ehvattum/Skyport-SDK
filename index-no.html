@@ -16,22 +16,21 @@
     <img src="tg.png">
     <br><br><br>
     <div class="content">
-    <h1>AI Konkurranse</h1>
+    <h1>AI Programming</h1>
     <a href="index.html">Click here for an english version of this page</a><br><br>
     Her kan du laste ned siste versjonen av den offisielle Skyport utviklingspakken.
     Husk å verifisere signaturen etter nedlastingen, for å
-    være sikker på at filen du lasted ned er <strong>ikke korrupt</strong> og <strong>fri av virus</strong>.<br>
+    være sikker på at filen du lasted ned <strong>ikke er korrupt</strong> og <strong>helt uten virus</strong>.<br>
 
-    Sjekk at du har den <strong>siste versjonen av utviklingspakken fra denne siden</strong>, siden nyere versjoner kan
-    bli lastet opp. Forumtråden <a href="http://forums.gathering.org/showthread.php?11135-AI-Programming-(tidligere-Hardcore-Programming)">AI Programming</a> på <a href="http://forum.gathering.org">forum.gathering.org</a> vil også bli oppdatert hver gang det legges ut en ny versjon.
+    Husk også å sjekke at du alltid har den <strong>siste versjonen</strong> av utviklingspakken fra denne siden. Nyere versjoner kan komme med oppdateringer som vil påvirke din AI. Forumtråden <a href="http://forums.gathering.org/showthread.php?11135-AI-Programming-(tidligere-Hardcore-Programming)">AI Programming</a> på <a href="http://forum.gathering.org">forum.gathering.org</a> vil også bli oppdatert hver gang det legges ut en ny versjon.
 
 <br><br>
     <h2>Komme i gang</h2>
     All dokumentasjon er tilgjengelig på både norsk og engelsk.
-    Start med å lese gjennom filen <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/en/GAME.md">docs/en/GAME.md</a> eller <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/no/GAME_NO.md">docs/no/GAME.md</a> for den engelske eller norske versjonen av spillreglene.
-    Ufullstendige APIer for protokollen i flere språk kan finnes i api/ mappen.
+    Start med å lese gjennom spill-reglene i <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/en/GAME.md">docs/en/GAME.md</a> (engelsk) eller <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/no/GAME_NO.md">docs/no/GAME.md</a> (norsk).
+    Ufullstendige APIer for protokollen i flere språk finner du også i api/ mappen.
     For å komme i gang med å skrive din egen API (eller lese protokollen), les
-    <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/en/PROTOCOL.md">docs/en/PROTOCOL.md</a> eller <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/no/PROTOCOL_NO.md">docs/no/PROTOCOL.md</a>
+    <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/en/PROTOCOL.md">docs/en/PROTOCOL.md</a> (engelsk) eller <a href="https://github.com/Amadiro/Skyport-logic/blob/master/docs/no/PROTOCOL_NO.md">docs/no/PROTOCOL.md</a> (norsk)
 <br><br>
     <h2>Releases</h2>
     <a href="Skyport-SDK-alpha-1.tar.bz2"><strong>Skyport-SDK-alpha-1.tar.bz2</strong></a>
@@ -41,16 +40,25 @@
       <li><strong>sha256 signatur:</strong> d0bb374cb66d7898ee7fc7b3829a338583e679efaa2fb4ab33f13e810468a15d</li>
       <li><strong>virustotal:</strong> <a href="https://www.virustotal.com/en/file/d0bb374cb66d7898ee7fc7b3829a338583e679efaa2fb4ab33f13e810468a15d/analysis/1361476334/">Analyse av denne filen på virustotal.com</a></li>
       <li><strong>Endringer i denne versjonen:</strong><br>
-	Inisiell alpha-release. Kan brukes til å komme i gang med generelle spill-regler,
-	for å starte med protokoll-implementasjon/for å lære seg API-en, og for å få en
-	generell idé om algoritmene som kan brukes for å vinne.
+	Tidlig alpha-release. Kan brukes til å komme i gang med generelle spill-regler,
+	for å starte med protokoll-implementasjon / lære seg API-en, og for å få overblikk over hvilke
+	algoritmene som kan brukes for å vinne.
 	</li>
     </list>
 <br><br>
     <h2>Problemer med utdaterte java versjoner på OSX</h2>
-    Det er et kjent problem med å kjøre serveren på OSX, som forårsakes av at OSX kan ha flere versjoner av java installert samtidig. I Safari får man den nyeste java 1.7 versjonen, men om man skriver `java` på kommando-linjen, startes java-versjon 1.6. Denne versjonen klarer ikke å kjøre serveren. En fiks for dette vil bli publisert her snart.
-        <br><br>
-      <div class="aifooter" style="vertical-align:bottom;font-size:60%;background-color:#CCCCCC">Last change: Wed Feb 27 12:52:03 CET 2013 by Jonathan Ringstad. See <a href="https://github.com/Amadiro/Skyport-SDK/tree/gh-pages">the github repo</a> for all changes.</div>
+    Serveren trenger en nyere java versjon en det som OSX tilbyr som standard. Det vil derfor være nødvendig å
+    oppdatere dette manuelt. Merk at OSX også skiller på java som plugin (som brukes i nettlesere; firefox, safari osv) 
+    og java som et terminal-verktøy. Skyport serveren benytter seg av den sistnevnte.
+    For å kunne ta i bruk serveren må man altså oppdatere terminal-java for å kunne gjennomføre kompileringen.
+    En guide til dette vil bli publisert.
+
+    <a href="http://www.java.com/en/download/installed.jsp">Link til java.com for å sjekke plugin versjon</a>
+    Hvis du vil sjekke terminal versjonen: Åpne terminalen og skriv "java -version".
+
+    Serveren trenger java versjon 1.7, mens nyeste OSX oppdatering tilbyr java versjon 1.6
+       <br><br>
+      <div class="aifooter" style="vertical-align:bottom;font-size:60%;background-color:#CCCCCC">Last change: Thu Feb 28 13:11:37 CET 2013 by Emil Hatlelid. See <a href="https://github.com/Amadiro/Skyport-SDK/tree/gh-pages">the github repo</a> for all changes.</div>
     </div>
 </div>
   </body>
